@@ -3,6 +3,7 @@ import React from "react";
 import AddedFeature from "./AddedFeature";
 
 const AddedFeatures = (props) => {
+  console.log("THis is the add featureS", props);
   return (
     <div className="content">
       <h6>Added features:</h6>
@@ -12,7 +13,7 @@ const AddedFeatures = (props) => {
             <AddedFeature
               key={item.id}
               feature={item}
-              removeFeature={props.removeFeature}
+              removeThing={props.removeThing}
             />
           ))}
         </ol>

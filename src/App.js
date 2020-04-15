@@ -18,6 +18,8 @@ const App = (props) => {
   const buyItem = (item) => {
     props.addFeature(item);
   };
+  console.log("This is the buy item", buyItem);
+  console.log("This is the remove thing", removeThing);
 
   return (
     <div className="boxes">
@@ -38,7 +40,6 @@ const App = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    features: state.car.features,
     additionalPrice: state.additionalPrice,
     car: state.car,
     additionalFeatures: state.additionalFeatures,

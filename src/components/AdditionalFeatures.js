@@ -2,6 +2,7 @@ import React from "react";
 import AdditionalFeature from "./AdditionalFeature";
 
 const AdditionalFeatures = (props) => {
+  console.log("THis is the additional featureS", props);
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -11,7 +12,7 @@ const AdditionalFeatures = (props) => {
             <AdditionalFeature
               key={item.id}
               feature={item}
-              buyItem={props.butItem}
+              buyItem={props.buyItem}
             />
           ))}
         </ol>
