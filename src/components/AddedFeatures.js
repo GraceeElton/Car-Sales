@@ -1,15 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import AddedFeature from './AddedFeature';
+import AddedFeature from "./AddedFeature";
 
-const AddedFeatures = props => {
+const AddedFeatures = (props) => {
+  console.log("THis is the add featureS", props);
   return (
     <div className="content">
       <h6>Added features:</h6>
       {props.car.features.length ? (
         <ol type="1">
-          {props.car.features.map(item => (
-            <AddedFeature key={item.id} feature={item} />
+          {props.car.features.map((item) => (
+            <AddedFeature
+              key={item.id}
+              feature={item}
+              removeThing={props.removeThing}
+            />
           ))}
         </ol>
       ) : (
